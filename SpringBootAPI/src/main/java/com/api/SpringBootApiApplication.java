@@ -8,7 +8,6 @@ public class SpringBootApiApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(SpringBootApiApplication.class, args);
-		dddddd
 	}
 
 }
