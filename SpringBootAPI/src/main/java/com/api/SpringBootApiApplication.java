@@ -9,6 +9,9 @@ import org.springframework.context.annotation.Bean;
 @SpringBootApplication
 public class SpringBootApiApplication {
 	
+	@Value("${ambiente}")
+	private String ambiente;
+	
 	/*
 	 * Referência do arquivo application.properties
 	@Value("${quantidade.unidade}")
@@ -18,6 +21,14 @@ public class SpringBootApiApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(SpringBootApiApplication.class, args);
 	}
+	
+	@Bean
+	public CommandLineRunner commandLineRunner() {
+		return args -> {
+			System.out.println(this.ambiente);
+		};
+	}
+	
 	
 	/*
 	 * Primeiro método a ser chamado após inicialização do método main
