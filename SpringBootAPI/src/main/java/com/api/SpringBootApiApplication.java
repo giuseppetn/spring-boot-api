@@ -34,14 +34,14 @@ public class SpringBootApiApplication {
 		SpringApplication.run(SpringBootApiApplication.class, args);
 	}
 	
-	/*
+	
 	@Bean
 	public CommandLineRunner commandLineRunner() {
 		return args -> {
 			this.exemploService.testarServico();
 		};
 	}
-	*/
+	
 	
 	/*
 	@Bean
