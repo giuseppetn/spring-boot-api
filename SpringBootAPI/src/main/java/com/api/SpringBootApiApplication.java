@@ -11,6 +11,7 @@ import org.springframework.context.annotation.Bean;
 
 import com.api.entities.Empresa;
 import com.api.repositories.EmpresaRepository;
+import com.api.services.ExemploService;
 
 @SpringBootApplication
 public class SpringBootApiApplication {
@@ -18,6 +19,7 @@ public class SpringBootApiApplication {
 	/* Essa anotação serve para injetar um componente dentro de outro componente */
 	@Autowired
 	private EmpresaRepository empresaRepository;
+	private ExemploService exemploService;
 	
 	
 	/*
@@ -28,6 +30,13 @@ public class SpringBootApiApplication {
 	
 	public static void main(String[] args) {
 		SpringApplication.run(SpringBootApiApplication.class, args);
+	}
+	
+	@Bean
+	public CommandLineRunner commandLineRunner() {
+		return args -> {
+			this.exemploService.testarServico();
+		};
 	}
 	
 	/*
