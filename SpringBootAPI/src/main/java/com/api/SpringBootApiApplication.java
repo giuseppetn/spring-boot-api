@@ -19,6 +19,8 @@ public class SpringBootApiApplication {
 	/* Essa anotação serve para injetar um componente dentro de outro componente */
 	@Autowired
 	private EmpresaRepository empresaRepository;
+	
+	@Autowired
 	private ExemploService exemploService;
 	
 	
@@ -32,12 +34,14 @@ public class SpringBootApiApplication {
 		SpringApplication.run(SpringBootApiApplication.class, args);
 	}
 	
+	/*
 	@Bean
 	public CommandLineRunner commandLineRunner() {
 		return args -> {
 			this.exemploService.testarServico();
 		};
 	}
+	*/
 	
 	/*
 	@Bean
