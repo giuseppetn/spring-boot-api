@@ -13,9 +13,14 @@ import com.api.dtos.EmpresaDto;
 import com.api.responses.Response;
 
 @RestController
-@RequestMapping("/api/empresas")
+@RequestMapping("/api/v1/empresas")
 
 public class EmpresaController {
+	
+	/**
+	 * @param nome
+	 * @return ResponseEntity<Response <String>>
+	 * */
 
 	@PostMapping
 	public ResponseEntity<Response <EmpresaDto>> cadastrar(@Valid @RequestBody EmpresaDto empresaDto, BindingResult result) {

@@ -11,7 +11,6 @@ import org.springframework.context.annotation.Bean;
 
 import com.api.entities.Empresa;
 import com.api.repositories.EmpresaRepository;
-import com.api.services.ExemploService;
 
 
 @SpringBootApplication
@@ -21,9 +20,10 @@ public class SpringBootApiApplication {
 	@Autowired
 	private EmpresaRepository empresaRepository;
 	
+	/*
 	@Autowired
 	private ExemploService exemploService;
-	
+	*/
 	
 	/*
 	 * Referência do arquivo application.properties
@@ -35,13 +35,14 @@ public class SpringBootApiApplication {
 		SpringApplication.run(SpringBootApiApplication.class, args);
 	}
 	
-	
+	/*
 	@Bean
 	public CommandLineRunner commandLineRunner() {
 		return args -> {
 			this.exemploService.testarServico();
 		};
 	}
+	*/
 	
 	
 	/*
