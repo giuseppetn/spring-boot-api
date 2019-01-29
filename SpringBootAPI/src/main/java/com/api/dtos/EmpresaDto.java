@@ -1,4 +1,8 @@
 package com.api.dtos;
+import javax.validation.constraints.NotEmpty;
+
+import org.hibernate.validator.constraints.Length;
+import org.hibernate.validator.constraints.br.CNPJ;
 
 public class EmpresaDto {
 
@@ -17,6 +21,8 @@ public class EmpresaDto {
 		this.id = id;
 	}
 
+	@NotEmpty(message = "Razão Social não pode ser vazia!")
+	@Length(min = 5, max = 200, message = "Razçao entre 5 e 200!")
 	public String getRazaoSocial() {
 		return razaoSocial;
 	}
@@ -25,6 +31,8 @@ public class EmpresaDto {
 		this.razaoSocial = razaoSocial;
 	}
 
+	@NotEmpty(message = "CNPJ não pode ser vazia!")
+	@CNPJ
 	public String getCnpj() {
 		return cnpj;
 	}
